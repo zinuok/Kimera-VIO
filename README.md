@@ -81,7 +81,7 @@ Some (but not all) targets in this export set were already defined.
   Targets Defined: gflags_shared;gflags_nothreads_shared<br>
   Targets not yet defined: gflags_static;gflags_nothreads_static<br>
 ```
-=> This is because glogs & gflags already installed via sudo apt install invoke crash. So remove those and try to compile the 'opencv3_catkin' (from [here](https://github.com/alibaba/euler/issues/158))<br>
+=> This is because glogs & gflags already installed via sudo apt install invoke crash. So remove those and try to compile the 'opencv3_catkin'
 ```
 # remove #
 $ sudo apt remove -y libgflags*
