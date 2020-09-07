@@ -83,9 +83,16 @@ Some (but not all) targets in this export set were already defined.
 ```
 => This is because glogs & gflags already installed via sudo apt install invoke crash. So remove those and try to compile the 'opencv3_catkin' (from [here](https://github.com/alibaba/euler/issues/158))<br>
 ```
+# remove #
 $ sudo apt remove -y libgflags*
 $ sudo apt remove -y sudo apt install libgoogle-glog*
+
+# build opencv3_catkin #
 $ catkin build -j $(nproc) opencv3_catkin
+
+# reinstall glog & catkin build #
+$ sudo apt install -y libgoogle-glog*
+$ catkin build -j $(nproc)
 ```
 
 
