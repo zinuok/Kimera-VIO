@@ -20,7 +20,7 @@
 
 
 # Index
-### 1. Prerequisites
+### 1. Prerequisites & install
 ####    &nbsp;&nbsp;&nbsp;&nbsp;● GTSAM >= 4.0
 ####    &nbsp;&nbsp;&nbsp;&nbsp;● OpenCV >= 3.3.1
 ####    &nbsp;&nbsp;&nbsp;&nbsp;● OpenGV
@@ -29,7 +29,7 @@
 ####    &nbsp;&nbsp;&nbsp;&nbsp;● DBoW2
 ####    &nbsp;&nbsp;&nbsp;&nbsp;● Kimera-RPGO
 ####    &nbsp;&nbsp;&nbsp;&nbsp;● ANMS
-### 2. Install
+### 2. Truoble Shooting
 ### 3. Jetson Boards
 ####    &nbsp;&nbsp;&nbsp;&nbsp;● Actually, there is no installation difference among TX2, Xavier, and NX
 ### 4. Run
@@ -63,6 +63,15 @@ $ wstool update
 # Compile #
 $ cd ~/catkin_ws && catkin build -j $(nproc)
 $ source ~/catkin_ws/devel/setup.bash
+```
+## 2. Trouble Shooting
++ Project 'image_proc' specifies '/usr/include/opencv' as an include dir,
+  which is not found while catkin builds 'disparity_image_proc' <br>
+=> In line 96 of /opt/ros/melodic/share/image_proc/cmake/image_procConfig.cmake, change:
+```
+set(_include_dirs "include;/usr/include;/usr/include/opencv")
+to
+set(_include_dirs "include;/usr/include;/usr/local/include/opencv")
 ```
 
 ## 3. Jetson Boards
