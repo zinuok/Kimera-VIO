@@ -73,7 +73,7 @@ set(_include_dirs "include;/usr/include;/usr/include/opencv")
 to
 set(_include_dirs "include;/usr/include;/usr/local/include/opencv")
 ```
-+ While catkin builds 'opencv3_catkin'. 
++ While catkin builds 'opencv3_catkin', <br> 
 Some (but not all) targets in this export set were already defined.<br>
 <br>
   Targets Defined: gflags_shared;gflags_nothreads_shared<br>
