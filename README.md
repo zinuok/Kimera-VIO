@@ -51,17 +51,17 @@ $ sudo apt-get install -y \
 ```
 + Kimera VIO ROS wrapper install
 ```
-# Download
+# Download #
 $ cd ~/catkin_ws
 $ catkin config --cmake-args -DCMAKE_BUILD_TYPE=Release && source ~/catkin_ws/devel/setup.bash
 $ cd ~/catkin_ws/src && git clone git@github.com:MIT-SPARK/Kimera-VIO-ROS.git
 
-# Install dependencies from rosinstall file using wstool
+# Install dependencies from rosinstall file using wstool #
 $ wstool merge Kimera-VIO-ROS/install/kimera_vio_ros_ssh.rosinstall
 $ wstool update
 
-# Compile
-$ cd ~/catkin_ws && catkin build -j 
+# Compile #
+$ cd ~/catkin_ws && catkin build -j $(nproc)
 $ source ~/catkin_ws/devel/setup.bash
 ```
 
