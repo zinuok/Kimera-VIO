@@ -36,6 +36,9 @@
 <br><br>
 
 ## 1. Prerequisites & Install
+```
+$ sudo apt-get install ros-melodic-image-geometry ros-melodic-pcl-ros ros-melodic-cv-bridge
+```
 + refer the installation guide from [install](https://github.com/MIT-SPARK/Kimera-VIO/blob/master/docs/kimera_vio_install.md)
 
 ## 3. Jetson Boards
