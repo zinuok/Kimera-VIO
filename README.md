@@ -100,11 +100,11 @@ $ catkin build -j $(nproc)
 #### ● Actually, no installation difference among TX2, Xavier, and NX
 
 ## 4. Run
-#### ● Belows are using V1_01_easy.bag from [EuRoC](https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets)
-#### ● If you want to use your own sensors, get a calibration data using [kalibr](https://github.com/zinuok/kalibr)
+#### ● I failed to run Kimera using EuRoC dataset. However, I succeed in my own dataset recorded using realsense D435i from [here]().
+#### ● RealsenseIR launch file is uploaded, If you want to use your own sensors, get a calibration data using [kalibr](https://github.com/zinuok/kalibr)
 ```
-$ roslaunch kimera_vio_ros kimera_vio_ros_euroc.launch
+$ roslaunch kimera_vio_ros kimera_vio_ros_realsense_IR.launch
 $ rviz -d $(rospack find kimera_vio_ros)/rviz/kimera_vio_euroc.rviz
-$ rosbag play --clock /PATH/TO/ROS_BAG_FILE
+$ rosbag play --clock /PATH/TO/[ROS_BAG_FILE]
 ```
 
