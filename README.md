@@ -68,7 +68,7 @@ $ source ~/catkin_ws/devel/setup.bash
 + Project 'image_proc' specifies '/usr/include/opencv' as an include dir,
   which is not found while catkin builds 'disparity_image_proc' <br>. This error may occur if you have built OpenCV manually, not using sudo apt install command. <br>
 => In line 96 of /opt/ros/melodic/share/image_proc/cmake/image_procConfig.cmake, <br>
-&nbsp;change:
+&nbsp;&nbsp;change:
 ```
 set(_include_dirs "include;/usr/include;/usr/include/opencv")
 to
