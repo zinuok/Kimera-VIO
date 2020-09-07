@@ -12,7 +12,7 @@
     + ROS: Melodic 
     + OpenCV 3.4.1
     <br>
-+ **github link**: [MIT-SPARK](https://github.com/MIT-SPARK/Kimera-VIO)
++ **github link**: [MIT-SPARK](https://github.com/MIT-SPARK/Kimera-VIO-ROS)
 ***
 <br>
 
@@ -36,10 +36,34 @@
 <br><br>
 
 ## 1. Prerequisites & Install
++ install guide using ROS from [here](https://github.com/MIT-SPARK/Kimera-VIO-ROS#1-installation)
 ```
-$ sudo apt-get install ros-melodic-image-geometry ros-melodic-pcl-ros ros-melodic-cv-bridge
+$ sudo apt install -y ros-melodic-image-geometry ros-melodic-pcl-ros ros-melodic-cv-bridge
+$ sudo apt -y install -y --no-install-recommends apt-utils
+$ sudo apt-get install -y \
+      cmake build-essential unzip pkg-config autoconf \
+      libboost-all-dev \
+      libjpeg-dev libpng-dev libtiff-dev \
+      libvtk6-dev libgtk-3-dev \
+      libatlas-base-dev gfortran \
+      libparmetis-dev \
+      python-wstool python-catkin-tools
 ```
-+ refer the installation guide from [install](https://github.com/MIT-SPARK/Kimera-VIO/blob/master/docs/kimera_vio_install.md)
++ Kimera VIO ROS wrapper install
+```
+# Download
+$ cd ~/catkin_ws
+$ catkin config --cmake-args -DCMAKE_BUILD_TYPE=Release && source ~/catkin_ws/devel/setup.bash
+$ cd ~/catkin_ws/src && git clone git@github.com:MIT-SPARK/Kimera-VIO-ROS.git
+
+# Install dependencies from rosinstall file using wstool
+$ wstool merge Kimera-VIO-ROS/install/kimera_vio_ros_ssh.rosinstall
+$ wstool update
+
+# Compile
+$ cd ~/catkin_ws && catkin build -j 
+$ source ~/catkin_ws/devel/setup.bash
+```
 
 ## 3. Jetson Boards
 #### ● Actually, no installation difference among TX2, Xavier, and NX
@@ -47,9 +71,6 @@ $ sudo apt-get install ros-melodic-image-geometry ros-melodic-pcl-ros ros-melodi
 ## 4. Run
 #### ● you have to get a calibration data using [kalibr](https://github.com/zinuok/kalibr)
 ```
-$ roslaunch realsense2_camera rs_camera.launch
-$ roslaunch mavros px4.launch
-$ roslaunch vins_estimator realsense_color.launch
-$ roslaunch vins_estimator vins_rviz.launch
+$ roslaunch
 ```
 
