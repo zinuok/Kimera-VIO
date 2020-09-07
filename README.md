@@ -38,7 +38,7 @@
 ## 1. Prerequisites & Install
 + install guide using ROS from [here](https://github.com/MIT-SPARK/Kimera-VIO-ROS#1-installation)
 ```
-$ sudo apt install -y ros-melodic-image-geometry ros-melodic-pcl-ros ros-melodic-cv-bridge
+$ sudo apt install -y ros-melodic-image-geometry ros-melodic-pcl-ros ros-melodic-cv-bridge ros-melodic-image-proc*
 $ sudo apt -y install -y --no-install-recommends apt-utils
 $ sudo apt-get install -y \
       cmake build-essential unzip pkg-config autoconf \
