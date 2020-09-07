@@ -100,8 +100,11 @@ $ catkin build -j $(nproc)
 #### ● Actually, no installation difference among TX2, Xavier, and NX
 
 ## 4. Run
-#### ● you have to get a calibration data using [kalibr](https://github.com/zinuok/kalibr)
+#### ● Belows are using V1_01_easy.bag from [EuRoC](https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets)
+#### ● If you want to use your own sensors, get a calibration data using [kalibr](https://github.com/zinuok/kalibr)
 ```
-$ roslaunch
+$ roslaunch kimera_vio_ros kimera_vio_ros_euroc.launch
+$ rviz -d $(rospack find kimera_vio_ros)/rviz/kimera_vio_euroc.rviz
+$ rosbag play --clock /PATH/TO/ROS_BAG_FILE
 ```
 
