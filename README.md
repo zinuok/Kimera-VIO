@@ -66,13 +66,21 @@ $ source ~/catkin_ws/devel/setup.bash
 ```
 ## 2. Trouble Shooting
 + Project 'image_proc' specifies '/usr/include/opencv' as an include dir,
-  which is not found while catkin builds 'disparity_image_proc' <br>
+  which is not found while catkin builds 'disparity_image_proc' <br>. This error may occur if you have built OpenCV manually, not using sudo apt install command
 => In line 96 of /opt/ros/melodic/share/image_proc/cmake/image_procConfig.cmake, change:
 ```
 set(_include_dirs "include;/usr/include;/usr/include/opencv")
 to
 set(_include_dirs "include;/usr/include;/usr/local/include/opencv")
 ```
++ While catkin builds 'opencv3_catkin'. 
+Some (but not all) targets in this export set were already defined.<br>
+<br>
+  Targets Defined: gflags_shared;gflags_nothreads_shared<br>
+  Targets not yet defined: gflags_static;gflags_nothreads_static<br>
+
+=> sss
+
 
 ## 3. Jetson Boards
 #### ● Actually, no installation difference among TX2, Xavier, and NX
