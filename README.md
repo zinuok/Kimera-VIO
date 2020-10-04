@@ -86,13 +86,14 @@ Some (but not all) targets in this export set were already defined.
 ```
 # remove #
 $ sudo apt remove -y libgflags*
-$ sudo apt remove -y sudo apt install libgoogle-glog*
+$ sudo apt remove -y libgoogle-glog*
 
 # build opencv3_catkin #
 $ catkin build -j $(nproc) opencv3_catkin
 $ source ./devel/setup.bash
 
 # reinstall glog & catkin build #
+$ sudo apt install -y libgflags*
 $ sudo apt install -y libgoogle-glog*
 $ catkin build -j $(nproc)
 ```
