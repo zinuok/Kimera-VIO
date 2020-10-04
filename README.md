@@ -90,6 +90,7 @@ $ sudo apt remove -y sudo apt install libgoogle-glog*
 
 # build opencv3_catkin #
 $ catkin build -j $(nproc) opencv3_catkin
+$ source ./devel/setup.bash
 
 # reinstall glog & catkin build #
 $ sudo apt install -y libgoogle-glog*
