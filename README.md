@@ -57,6 +57,7 @@ $ catkin config --cmake-args -DCMAKE_BUILD_TYPE=Release && source ~/catkin_ws/de
 $ cd ~/catkin_ws/src && git clone git@github.com:MIT-SPARK/Kimera-VIO-ROS.git
 
 # Install dependencies from rosinstall file using wstool #
+$ wstool init
 $ wstool merge Kimera-VIO-ROS/install/kimera_vio_ros_ssh.rosinstall
 $ wstool update
 
