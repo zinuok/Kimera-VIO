@@ -105,6 +105,7 @@ $ catkin build -j $(nproc)
 ## 4. Run
 #### ● I failed to run Kimera using EuRoC dataset. However, I succeed in my own dataset recorded using realsense D435i from [here]().
 #### ● RealsenseIR launch file is uploaded, If you want to use your own sensors, get a calibration data using [kalibr](https://github.com/zinuok/kalibr)
+#### ● the reference coordinate of extrinsic matrix betweeb cam and imu is same as VINS-Fusion. 
 ```
 $ roslaunch kimera_vio_ros kimera_vio_ros_realsense_IR.launch
 $ rviz -d $(rospack find kimera_vio_ros)/rviz/kimera_vio_euroc.rviz
